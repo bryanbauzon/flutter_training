@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training/screens/widgets-page.dart';
 
 class TraingPage extends StatefulWidget{
   @override
@@ -36,13 +35,7 @@ class _TrainingPageState extends State<TraingPage>{
                   // Login Button
                   FlatButton(
                     onPressed: (){
-                      //function to redirect to widgets-page.dart
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context)=>WidgetsPage()
-                        )
-                      ); 
+                      
                     },
                     color: Colors.blue,
                     textColor: Colors.white,
