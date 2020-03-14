@@ -32,7 +32,8 @@ class _TrainingPageState extends State<TraingPage> with SingleTickerProviderStat
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Training"),
+        leading: Icon(Icons.place),
+        title: Text("Flutter Development"),
         bottom: TabBar(
           controller: _tabController,
           tabs:myTabs

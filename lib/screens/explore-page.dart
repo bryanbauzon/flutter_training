@@ -65,6 +65,21 @@ class _ExploreWidgetApp extends State<ExploreWidget>{
             },
           ),
 
+          FlatButton(onPressed: (){
+              final snackBar = SnackBar(content: Text("Camille"),
+                action:SnackBarAction(
+                  label:"Okay",
+                  onPressed: (){
+                    
+                  },
+                )
+              );
+              Scaffold.of(context).showSnackBar(snackBar);
+          },
+            color:Colors.blueGrey,
+            textColor: Colors.white,
+           child: Text("Submit",))
+
           ],
         ),
         )
