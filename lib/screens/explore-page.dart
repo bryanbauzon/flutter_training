@@ -70,7 +70,7 @@ class _ExploreWidgetApp extends State<ExploreWidget>{
                 action:SnackBarAction(
                   label:"Okay",
                   onPressed: (){
-                    
+
                   },
                 )
               );

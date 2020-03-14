@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/screens/explore-page.dart';
 import 'package:flutter_training/screens/favorite-page.dart';
+import 'package:flutter_training/screens/home-page.dart';
 
 class TraingPage extends StatefulWidget{
   @override
@@ -10,6 +11,7 @@ class TraingPage extends StatefulWidget{
 class _TrainingPageState extends State<TraingPage> with SingleTickerProviderStateMixin{
 
   final List<Tab>myTabs = <Tab>[
+      Tab(text:"Home",icon: Icon(Icons.home),),
       Tab(text:"Favorite",icon: Icon(Icons.favorite),),
       Tab(text:"Explore",icon: Icon(Icons.explore),),
   ];
@@ -42,6 +44,7 @@ class _TrainingPageState extends State<TraingPage> with SingleTickerProviderStat
       body:TabBarView(
         controller: _tabController,
           children: <Widget>[
+            HomePageWidget(),
             FavoriteWidget(),
             ExploreWidget(),
           ],  
