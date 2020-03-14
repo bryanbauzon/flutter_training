@@ -32,6 +32,7 @@ class _TrainingPageState extends State<TraingPage>{
                     decoration:InputDecoration(hintText:"Password")
                   ),
                   
+                  const SizedBox(height: 20,),
                   // Login Button
                   FlatButton(
                     onPressed: (){
@@ -47,15 +48,9 @@ class _TrainingPageState extends State<TraingPage>{
                     textColor: Colors.white,
                     padding: EdgeInsets.all(5),
                     splashColor: Colors.blueAccent,
-                    child: Text("Redirect to Widget Page",style: TextStyle(fontSize: 18.0),),
+                    child: Text("Login",style: TextStyle(fontSize: 18.0),),
                   ),
-                  const SizedBox(height: 20,),
-                   RaisedButton(
-                     onPressed: (){},
-                      textColor: Colors.white,
-                      color: Colors.blueAccent,
-                      child: Text("Raised Button"),
-                  ),
+                   
                 ],
            ),
         ),
