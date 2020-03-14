@@ -12,6 +12,12 @@ class _TrainingPageState extends State<TraingPage>{
       appBar: AppBar(
         title:Text("Flutter Training"),//develop
       ),
+      body: Center(
+        child: 
+        Text("Hello",
+        )
+        ,
+      ),
     );
   }
 
