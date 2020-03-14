@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training/screens/widgets-page.dart';
 
 class TraingPage extends StatefulWidget{
   @override
@@ -33,12 +34,20 @@ class _TrainingPageState extends State<TraingPage>{
                   
                   // Login Button
                   FlatButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      //function to redirect to widgets-page.dart
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context)=>WidgetsPage()
+                        )
+                      ); 
+                    },
                     color: Colors.blue,
                     textColor: Colors.white,
                     padding: EdgeInsets.all(5),
                     splashColor: Colors.blueAccent,
-                    child: Text("Flat Button",style: TextStyle(fontSize: 18.0),),
+                    child: Text("Redirect to Widget Page",style: TextStyle(fontSize: 18.0),),
                   ),
                   const SizedBox(height: 20,),
                    RaisedButton(
