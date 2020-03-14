@@ -13,10 +13,25 @@ class _TrainingPageState extends State<TraingPage>{
         title:Text("Flutter Training"),//develop
       ),
       body: Center(
-        child: 
-        Text("Hello",
-        )
-        ,
+        child: Container(
+           margin: EdgeInsets.all(10),
+           padding: EdgeInsets.all(10),
+           child: Column(
+             crossAxisAlignment:CrossAxisAlignment.center,
+             mainAxisAlignment:MainAxisAlignment.center,
+                children: <Widget>[
+                  //Username
+                  TextField(
+                    decoration:InputDecoration(hintText: "Username")
+                  ),
+                  //Password
+                  TextField(
+                    obscureText:true,
+                    decoration:InputDecoration(hintText:"Password")
+                  )
+                ],
+           ),
+        ),
       ),
     );
   }
