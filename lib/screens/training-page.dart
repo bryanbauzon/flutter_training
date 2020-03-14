@@ -56,30 +56,6 @@ class _TrainingPageState extends State<TraingPage>{
                       color: Colors.blueAccent,
                       child: Text("Raised Button"),
                   ),
-                  Card(
-                      child: Column(
-                        mainAxisSize:MainAxisSize.min,
-                        children:<Widget>[
-                          const ListTile(
-                            leading: Icon(Icons.add_a_photo),
-                            title:Text("Photography"),
-                            subtitle: Text("Max Bryan C. Bauzon"),
-                          ),
-                          ButtonBar(
-                            children:<Widget>[
-                                FlatButton(
-                                  onPressed: (){}, 
-                                  child: const Text("View")
-                                ),
-                                 FlatButton(
-                                  onPressed: (){}, 
-                                  child: const Text("Add")
-                                )
-                            ]
-                          ),
-                        ]
-                      ) ,
-                  ), 
                 ],
            ),
         ),

@@ -17,7 +17,7 @@ class _WidgetsPageState extends State<WidgetsPage>{
             children: <Widget>[
               Card(
                 child:InkWell(
-                  splashColor: Colors.blue.withAlpha(20),
+                  splashColor: Colors.blue.withAlpha(1),
                   onTap: (){
                     print("Card Tapped!");
                   },
