@@ -10,7 +10,7 @@ class _TrainingPageState extends State<TraingPage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Text("Flutter Training"),
+        title:Text("Flutter Training"),// hello master branch
       ),
     );
   }
