@@ -12,9 +12,9 @@ class TraingPage extends StatefulWidget{
 class _TrainingPageState extends State<TraingPage> with SingleTickerProviderStateMixin{
 
   final List<Tab>myTabs = <Tab>[
-      Tab(text:"Home",icon: Icon(Icons.home),),
-      Tab(text:"Favorite",icon: Icon(Icons.favorite),),
-      Tab(text:"Explore",icon: Icon(Icons.explore),),
+      Tab(icon: Icon(Icons.home),),
+      Tab(icon: Icon(Icons.favorite),),
+      Tab(icon: Icon(Icons.explore),),
   ];
 
   TabController _tabController;
@@ -39,22 +39,41 @@ class _TrainingPageState extends State<TraingPage> with SingleTickerProviderStat
     },
       child:  Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.place),
-        title: Text("Flutter Development"),
-        actions: <Widget>[
-          IconButton(onPressed: (){
-              Navigator.push(context, 
-                MaterialPageRoute(builder: (context)
-                => LoginPage())
-              );
-          },
-            icon: Icon(Icons.clear),
-          )
-        ],
+        title: Text("Tondol Beach"),
         bottom: TabBar(
           controller: _tabController,
           tabs:myTabs
         ),
+      ),
+      drawer: Drawer(
+        child:ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+                decoration: BoxDecoration(
+                  color:Colors.blue
+                ),
+                child: Text("Tondol Beach",
+                    style: TextStyle(
+                      color:Colors.white,
+                      fontSize:20
+                    ),
+                ),
+            ),
+            ListTile(
+              leading:Icon(Icons.settings),
+              title:Text("Settings"),
+            ),
+            ListTile(
+              leading:Icon(Icons.arrow_back),
+              title:Text("Logout"),
+              onTap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=> LoginPage())
+              );
+              },
+            )
+          ],
+          )
       ),
       body:TabBarView(
         controller: _tabController,

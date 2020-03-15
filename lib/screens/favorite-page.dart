@@ -13,35 +13,7 @@ class _FavoriteWidgetApp extends State<FavoriteWidget>{
       body:Center(
         child: Column(
           children: <Widget>[
-              //Card
-              Card(
-                child:Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children:<Widget>[
-                      const ListTile(
-                        leading:Icon(Icons.favorite),
-                        title: Text("lorem ipsum"),
-                        subtitle: Text("lorem ipsum dolor"),
-                      ),
-                      ButtonBar(
-                        children:<Widget>[
-                            FlatButton(onPressed: (){
-                            }, child: Text("View"))
-                        ]
-                      )
-                  ]
-                )
-              ),
-              ActionChip(
-                avatar: CircleAvatar(
-                  backgroundColor:Colors.blueGrey.shade100,
-                  child:Text("I.T")
-                ),
-                label: Text("Bryan"), onPressed: (){
-                  
-              }),
-
-             
+             Text("Favorites")
           ],
         ),
         )
