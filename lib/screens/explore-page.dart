@@ -10,7 +10,15 @@ class _ExploreWidgetApp extends State<ExploreWidget>{
   bool isSwitched = false;
   bool isChecked = false;
   double slider  = 0;
+
+  final myController = TextEditingController();
   
+  @override
+  void dispose(){
+    myController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(  
@@ -20,6 +28,7 @@ class _ExploreWidgetApp extends State<ExploreWidget>{
         child: Column(
           children: <Widget>[
             TextField(
+              controller: myController,
               decoration: 
                   InputDecoration(
                       // hintText: "Normal Text",
@@ -78,7 +87,20 @@ class _ExploreWidgetApp extends State<ExploreWidget>{
           },
             color:Colors.blueGrey,
             textColor: Colors.white,
-           child: Text("Submit",))
+           child: Text("Submit",)
+           ),
+           FloatingActionButton(
+             onPressed: (){
+                return showDialog(
+                    context: context,
+                    builder: (context){
+                      return AlertDialog(
+                        content: Text(myController.text),
+                      );
+                    }  
+                  );
+            }
+           )
 
           ],
         ),
