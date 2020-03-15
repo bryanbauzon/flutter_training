@@ -61,6 +61,10 @@ class _TrainingPageState extends State<TraingPage> with SingleTickerProviderStat
                 ),
             ),
             ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Account"),
+            ),
+            ListTile(
               leading:Icon(Icons.settings),
               title:Text("Settings"),
             ),
@@ -68,8 +72,7 @@ class _TrainingPageState extends State<TraingPage> with SingleTickerProviderStat
               leading:Icon(Icons.arrow_back),
               title:Text("Logout"),
               onTap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context)=> LoginPage())
-              );
+               _logoutDialog(context);
               },
             )
           ],
@@ -86,5 +89,29 @@ class _TrainingPageState extends State<TraingPage> with SingleTickerProviderStat
     ),
      );
   }
+}
+
+void _logoutDialog(BuildContext context){
+  
+  showDialog(
+    context: context,
+    builder: (BuildContext context){
+        return AlertDialog(
+          title:Text("Message"),
+          content:Text("Do you want to logout?"),
+          actions: <Widget>[
+            FlatButton(onPressed: (){
+              Navigator.push(context,MaterialPageRoute(builder: (context)=> LoginPage()));
+            }, child: Text("Yes")
+            ),
+            FlatButton(onPressed: (){
+                Navigator.pop(context);
+            }, child: Text("No")
+            ),
+            
+          ],
+        );
+    }
+  );
 }
 
