@@ -22,12 +22,10 @@ class _ExploreWidgetApp extends State<ExploreWidget>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(  
-      body:Container(
-        margin:EdgeInsets.all(20),
+      body:ListView(
         padding: EdgeInsets.all(10),
-        child: Column(
-          children: <Widget>[
-            TextField(
+        children: <Widget>[
+    TextField(
               controller: myController,
               decoration: 
                   InputDecoration(
@@ -101,9 +99,15 @@ class _ExploreWidgetApp extends State<ExploreWidget>{
                   );
             }
            )
+        ],
+        // margin:EdgeInsets.all(20),
+        // padding: EdgeInsets.all(10),
+        // child: Column(
+        //   children: <Widget>[
+        
 
-          ],
-        ),
+        //   ],
+        // ),
         )
     );
   }
