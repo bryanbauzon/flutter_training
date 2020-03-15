@@ -21,17 +21,24 @@ class _ExploreWidgetApp extends State<ExploreWidget>{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(  
+    return Scaffold( 
       body:ListView(
         padding: EdgeInsets.all(10),
         children: <Widget>[
-    TextField(
+         TextField(
               controller: myController,
+              
               decoration: 
                   InputDecoration(
-                      // hintText: "Normal Text",
-                      labelText: "Normal Text"
+                    border:OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.teal
+                        )
+                    ),
+                      labelText: "Username",
+                      prefixIcon: Icon(Icons.person)
                   ),
+
             ),
             //password
             TextField(
@@ -52,9 +59,9 @@ class _ExploreWidgetApp extends State<ExploreWidget>{
               }
             ),
             //Switch
-            Switch(
+            SwitchListTile(
+              title: Text("Grind"),
               value: isSwitched,
-              activeTrackColor: Colors.blueGrey,
               onChanged: (bool value){
               setState(() {
                 isSwitched = value;
