@@ -2,6 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_training/screens/detail-page.dart';
 
+class Todo{
+  final String title;
+  final String description;
+
+  Todo(this.title,this.description);
+}
+
 class HomePageWidget extends StatefulWidget{
     @override
     _HomePageWidgetApp createState()=> _HomePageWidgetApp();
@@ -12,11 +19,7 @@ class _HomePageWidgetApp extends State<HomePageWidget>{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body:Container(
-        child: Column(
-           children: <Widget>[
-              ListView.builder(
+    return ListView.builder(
                 itemCount: todos.length,
                 itemBuilder: (context,index){
                   return ListTile(
@@ -28,17 +31,7 @@ class _HomePageWidgetApp extends State<HomePageWidget>{
                       },
                   );
                 },
-              )
-           ],
-        ),
-      )
     );
   }
 }
 
-class Todo{
-  final String title;
-  final String description;
-
-  Todo(this.title,this.description);
-}
