@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 class FavoriteWidget extends StatefulWidget{
   @override
-    _FavoriteWidgetApp createState() => _FavoriteWidgetApp();
+    _FavoriteWidgetState createState() => _FavoriteWidgetState();
 }
 
-class _FavoriteWidgetApp extends State<FavoriteWidget>{
+class _FavoriteWidgetState extends State<FavoriteWidget>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(

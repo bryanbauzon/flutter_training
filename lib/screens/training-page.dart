@@ -12,6 +12,7 @@ class TraingPage extends StatefulWidget{
 class _TrainingPageState extends State<TraingPage> with SingleTickerProviderStateMixin{
 
   final List<Tab>myTabs = <Tab>[
+      
       Tab(icon: Icon(Icons.home),),
       Tab(icon: Icon(Icons.favorite),),
       Tab(icon: Icon(Icons.explore),),
