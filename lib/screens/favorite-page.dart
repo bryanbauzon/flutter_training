@@ -6,10 +6,9 @@ class FavoriteWidget extends StatefulWidget{
     _FavoriteWidgetState createState() => _FavoriteWidgetState();
 }
 
-class _FavoriteWidgetState extends State<FavoriteWidget>{
 
-  bool _isFavorited = false;
-  int _favoriteCount = 41;
+class _FavoriteWidgetState extends State<FavoriteWidget>{
+ 
 
   Widget _titleSection = Container(
     padding: const EdgeInsets.all(32),
@@ -39,11 +38,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>{
             ],
           ),
           ),
-          Icon(
-            Icons.favorite,
-            color:Colors.red[500] 
-          ),
-          Text('41')
+           subFavoriteWidget()
       ],
     ),
   );
@@ -111,10 +106,45 @@ Widget _buttonSection = Container(
         )
     );
   }
- 
+}
 
 
-  void _toggleFavorite(){
+class subFavoriteWidget extends StatefulWidget{
+  @override
+  _subFavoriteWidgetState createState() =>_subFavoriteWidgetState();
+}
+class _subFavoriteWidgetState extends State<subFavoriteWidget>{
+  
+  bool _isFavorited = false;
+  int _favoriteCount = 41;
+  
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Row(
+      
+        mainAxisSize:MainAxisSize.min,
+      children: <Widget>[
+        Container(
+                padding: EdgeInsets.all(0),
+                child: IconButton(
+                  icon:_isFavorited?  Icon(Icons.favorite):Icon(Icons.favorite_border),
+                  color: Colors.red[500],  
+                  onPressed: _toggleFavorite,
+                ),
+            ),
+            SizedBox(
+              width: 18,
+              child: Container(
+                child:Text('$_favoriteCount'),
+              ),
+
+            )
+      ],
+    );
+  }
+
+void _toggleFavorite(){
   setState((){
       if(_isFavorited){
           _favoriteCount -= 1;
@@ -124,25 +154,12 @@ Widget _buttonSection = Container(
           _isFavorited = true;
       }
   });
+  }
+
 }
-}
 
 
-//  Container(
-//                 padding: EdgeInsets.all(0),
-//                 child: IconButton(
-//                   icon:_isFavorited?  Icon(Icons.favorite):Icon(Icons.favorite_border),
-//                   color: Colors.red[500],  
-//                   onPressed: _toggleFavorite,
-//                 ),
-//             ),
-//             SizedBox(
-//               width: 18,
-//               child: Container(
-//                 child:Text('$_favoriteCount'),
-//               ),
 
-//             )
 
 
 
