@@ -38,7 +38,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>{
             ],
           ),
           ),
-           subFavoriteWidget()
+           SubFavoriteWidget()
       ],
     ),
   );
@@ -109,11 +109,11 @@ class _FavoriteWidgetState extends State<FavoriteWidget>{
 }
 
 
-class subFavoriteWidget extends StatefulWidget{
+class SubFavoriteWidget extends StatefulWidget{
   @override
-  _subFavoriteWidgetState createState() =>_subFavoriteWidgetState();
+  _SubFavoriteWidgetState createState() =>_SubFavoriteWidgetState();
 }
-class _subFavoriteWidgetState extends State<subFavoriteWidget>{
+class _SubFavoriteWidgetState extends State<SubFavoriteWidget>{
   
   bool _isFavorited = false;
   int _favoriteCount = 41;
